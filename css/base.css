@@ -1,0 +1,177 @@
+html {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 62.5%;
+    margin: 0;
+  }
+
+body {
+    font-size: 1.6em;
+    margin: 0;
+}
+/* Hamburger Menu */
+.hamburger_Container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 2.5rem 0 2.5rem;
+}
+.header__btn {
+    width: 48px;
+    height: 24px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+  }
+  
+  .line {
+    height: 2px;
+    width: 100%;
+    background-color: #61C3D3;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .header__btn__line01 {
+    transform-origin: left top;
+  }
+  
+  .header__btn__line03 {
+    transform-origin: left bottom;
+  }
+  
+  .header__btn__line01.open {
+    transform: rotate(25deg) translate(0, 1px);
+    background-color: white;
+  }
+  
+  .header__btn__line02.open {
+    opacity: 0;
+  }
+  
+  .header__btn__line03.open {
+    transform: rotate(-25deg) translate(0, -1px);
+    background-color: white;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #61C3D3;
+    background: linear-gradient(180deg, #61C3D3,#7BD2E0,#C0E7ED);
+    transition: right 0.5s ease;
+    z-index: 998;
+  }
+  
+  nav.open {
+    right: 0;
+  }
+
+  /* header CatchCopy */
+    header figure {
+        margin: auto 4rem;
+    }
+    header figure p img {
+        max-width: 50%;
+
+    }
+    header figure p {
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
+        padding: 4rem 0 0 0;
+    }
+
+    /* Key Visual Video */
+    .KeyVisualMovie video {
+        width: 22rem;
+    }
+
+    /* ABOUT Section */
+    .about p {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #01A2A3;
+        margin: 0;
+    }
+    .about_list{
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        font-size: 3.2rem;
+        font-weight: bolder;
+        }
+
+    /* about info */
+    .about_container {
+        margin: 0 2.5rem ;
+    }
+    .aboutInfo {
+        margin: auto 4rem;
+    }
+    .aboutInfo h2 {
+        text-align: center;
+        font-size: 2.6rem;
+        color: #01A2A3;
+    }
+
+    /* TripQuestとは？　セクション */
+    .TQ_description {
+        /* position: relative; */
+        background: linear-gradient(180deg, #61C3D3,#7BD2E0,#C0E7ED);
+        border-radius: 4rem;
+    }
+    .TQ_description_inner {
+        padding: 8rem 5rem;
+        color: white;
+    }
+    .TQ_description_inner h2 {
+        margin: 0;
+        padding-bottom: 2rem;
+        font-weight: bolder;
+    }
+    .TQ_description_inner p {
+        padding: 1.5rem 1.5rem;
+        margin: 0;
+
+    }
+    
+    /* 使い方　セクション */
+
+    /* Quest 説明 */
+    .Quest_info {
+        margin: 0 2.5rem;
+        color: white;
+    }
+    .Quest_info h2{
+        background-color: #01A2A3;
+        border-radius: 4rem;
+        text-align: center;
+        margin: 0 7.5rem;
+        padding: 2rem 1rem;
+    }
+
+    .Quest_info_container {
+        background: linear-gradient(180deg, #61C3D3,#7BD2E0,#C0E7ED);
+        border-radius: 4rem;
+    }
+    .quest_Description h3{
+        text-align: center;
+        font-size: 2.2rem;
+        padding: 4rem 0;
+        font-weight: bold;
+        color: white;
+
+    }
+    .quest_Description p {
+        padding: 0 4rem;
+        text-align: center;
+    }
