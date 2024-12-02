@@ -88,8 +88,24 @@ body {
     }
 
     /* Key Visual Video */
-    .KeyVisualMovie video {
-        width: 22rem;
+    .videoWrapper {
+        width: 35.2rem; /* Adjust width as needed */
+        height: 35rem ; /* Adjust height as needed */
+        clip-path: inset(0 2% 0 0 round 0);
+        overflow: hidden;
+        padding: 4rem 2.5rem;
+        
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* wideWaterDrop */
+    .wideWaterDrop img {
+        width: 40.2rem;
+        padding: 4rem 0 3rem 0 ;
     }
 
     /* ABOUT Section */
