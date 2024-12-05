@@ -195,11 +195,165 @@ body {
 
     }
     
+    /* TQ移行ボタン */
+    .TQserviceBtn {
+        background-color: white;
+        border-radius: 3rem;
+        margin: 4rem 0 2rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .TQserviceBtn p a {
+        color: black;
+        font-size: 1.4rem;
+        font-weight: bolder;
+        list-style-type: none;
+        text-decoration: none;
+        padding: 0 0 0 4rem;
+    }
+
+    .TQserviceBtn p {
+        padding: 2rem 0;
+    }
+
+    .TQserviceBtn div {
+        padding: 1.2rem 1rem 1rem 0 ;
+    }
+
+    .TQserviceBtn div img {
+        width: 3.8rem;
+    }
+
+    
+
+
     /* 使い方　セクション */
+
+
+    /* TripQuestで雨の日を特別にしよう！　セクション */
+
+    .questList_Intro_inner {
+        padding: 8rem 0 4rem 0 ;
+
+    }
+    .questList_Intro {
+        background: linear-gradient(180deg, #61C3D3,#ADFDDB);
+        border-radius: 4rem;
+        color: white;
+
+    }
+    .questList_Intro_inner h2 {
+        text-align: center;
+        margin: 0 2.5rem;
+    }
+
+    .questList_Intro_inner p {
+        padding: 4rem 6.5rem 0 6.5rem ;
+        margin: 0;
+    }
+    .questList_Intro_inner p strong {
+        color: #01A2A3;
+        font-weight: bold;
+
+    }
+
+
+        /* QuestList BTN */
+        .questList_Intro .questList {
+            margin: 3rem 2.5rem;
+            border: 3px dotted #61C3D3;       
+            border-radius: 4rem;
+         }       
+
+        .questList_Intro .questList h3{
+            text-align: center;
+            margin: 1rem 0;
+            font-size: 2.2rem;
+        }
+
+        .questList_Intro .questList .questList_inner {
+            color: white;
+        }
+
+        .questList_Intro  .questList_btn, .questList_btnQ3 {
+            border:solid 2px #01A2A3;
+            background:rgb(255, 255, 255, 0.5);
+            text-align:center;
+            padding:15px 0;
+            border-radius: 30px;
+            margin: 2rem 2.5rem;
+            position: relative;
+        }
+        
+        .questList_Intro  .questList_btn a, .questList_btnQ3  a {
+            text-decoration: none;
+        }
+        .questList_Intro  .questList_btn   p {
+            margin: 0;
+            padding: 0 0 0 1.5rem;
+            text-align: left;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+        }
+        .questList_Intro  .questList_btn  .btn-name p strong {
+            font-size: 1.4rem;
+            color: black;
+        }
+        .questList_Intro  .questList_btn   .btn-name p small {
+            color: #01A2A3;
+            font-size: 1.2rem;
+            margin: 0;
+            padding-left: 1.6rem;
+        }
+        .questList_Intro  .questList_btn   .btn-name p  img{
+            width: 1.2rem;
+            position: absolute;
+            top: 58%;
+        }
+
+        .questList_Intro  .questList_btn a span {
+            position: absolute;
+            top: 25%;
+            right: 3%;
+        }
+        .questList_Intro  .questList_btn a span img {
+            width: 3.8rem;
+        }
+            /* Quest List Btn Quest 3 part */
+            .questList_Intro  .questList_btnQ3  .btn-nameQ3 p {
+                margin: 0;
+                padding: 0 0 0 1.5rem;
+                text-align: left;
+                }
+            .questList_Intro  .questList_btnQ3  .btn-nameQ3 p strong {
+                font-size: 1.4rem;
+                color: black;
+            }
+            .questList_Intro  .questList_btnQ3   .btn-nameQ3 p small {
+                color: #01A2A3;
+                font-size: 1.2rem;
+                margin: 0;
+                padding-left: 1.6rem;
+            }
+            .questList_Intro  .questList_btnQ3   .btn-nameQ3 p  img{
+                width: 1.2rem;
+                position: absolute;
+                top: 68%;
+            }
+            .questList_Intro  .questList_btnQ3 a span {
+                position: absolute;
+                top: 35%;
+                right: 3%;
+            }
+            .questList_Intro  .questList_btnQ3 a span img {
+                width: 3.8rem;
+            }
+    
+
 
     /* Quest 説明 */
     .Quest_info {
-        margin: 0 2.5rem;
+        margin: 50% 2.5rem;
         color: white;
     }
     .Quest_info h2{
@@ -208,6 +362,14 @@ body {
         text-align: center;
         margin: 0 7.5rem;
         padding: 2rem 1rem;
+        position: relative;
+    }
+
+    .Quest_info h2 img {
+        position: absolute;
+        width: 20%;
+        top: 85%;
+        left: 42%;
     }
 
     .Quest_info_container {
@@ -220,9 +382,115 @@ body {
         padding: 4rem 0;
         font-weight: bold;
         color: white;
+        margin: 0;
 
     }
     .quest_Description p {
         padding: 0 4rem;
         text-align: center;
     }
+
+    .Quest_info_container {
+        margin: 20% 0;
+    }
+    .border img {
+        max-width: 100%;
+        width: 80%;
+        margin: auto 10%;
+    }
+
+    .quest_Description figure {
+        position: relative;
+    }
+    .quest_Description figure img{
+        max-width: 100%;
+        width: 74%;
+    }
+
+    .quest_Description p {
+        margin: 30% 0 20% 0;
+    }
+    .quest_Description figure p {
+        width: 55%;
+        text-align: left;
+        background: rgb(1 ,162, 163, 0.8);
+        border-radius: 30px;
+        padding: 2rem ;
+        position: absolute;
+        top: 58%;
+        left: 33%;
+        margin: 0;
+    }
+
+        /* スポット情報 */
+        .Spot_Info p {
+            padding: 0 15%;
+            font-size: 1.4rem;
+            margin: 10% 0 20% 0;
+        }
+
+        .Spot_Info_title {
+            margin: 15% 0 5% 0;
+        }
+        .Spot_Info_title h4{
+            font-size: 2rem;
+            text-align: center;
+            margin: 0;
+            letter-spacing: 0.5rem;
+        }
+        .Spot_Info_title p {
+            color: #01A2A3;
+            text-align: center;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .Spot_Info figure {
+            margin: 0 10%;
+        }
+        .Spot_Info figure img {
+            max-width: 100%;
+        }
+
+        /* 達成条件 */
+
+        .clear_Requirement h4 {
+            text-align: center;
+            font-size: 2rem;
+        }
+        .clear_Requirement figure {
+            margin: 0 10%;
+        }
+        .clear_Requirement figure img {
+            max-width: 100%;
+        }
+
+        .clear_Requirement_Info {
+            margin: 10% 0 20% 0;
+        }
+        .clear_Requirement_Info p {
+            margin: 0 15% 0 15%;
+        } 
+        .clear_Requirement_Info span p {
+            margin: 5% 15% 0 15%;
+        }
+        .clear_Requirement_Info p strong {
+            color: #01A2A3;
+        }
+        .questPeek {
+            position: relative;
+        }
+        .questPeek p{
+            font-size: 2.2rem;
+            color: #01A2A3;
+            width: 40%;
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+
+        }
+        .questPeek img {
+            max-width: 80%;
+            position: relative;
+            left: 25%;
+        }
+        
