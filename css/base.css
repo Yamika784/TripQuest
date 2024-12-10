@@ -1,6 +1,5 @@
 html {
     font-family: "Zen Maru Gothic", serif;
-    font-weight: 400;
     font-style: normal;
     font-size: 62.5%;
     margin: 0;
@@ -10,11 +9,21 @@ body {
     font-size: 1.6em;
     margin: 0;
 }
+
+img{
+    display: block;
+}
+
+video{
+    display: block;
+}
 /* Hamburger Menu */
+
 .hamburger_Container {
     display: flex;
     justify-content: space-between;
     padding: 4rem 2.5rem 0 2.5rem;
+    position: sticky;
 }
 .header__btn {
     width: 48px;
@@ -23,7 +32,7 @@ body {
     flex-flow: column;
     justify-content: space-between;
     position: relative;
-    z-index: 999;
+    z-index: 1001;
     cursor: pointer;
   }
   
@@ -63,24 +72,28 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #61C3D3;
-    background: linear-gradient(180deg, #61C3D3,#7BD2E0,#C0E7ED);
+    background: linear-gradient(180deg, #61C3D3, #7BD2E0, #C0E7ED);
     transition: right 0.5s ease;
-    z-index: 998;
-  }
+    z-index: 1000;  /* これを追加して他の要素より前面に表示 */
+}
+
   
-  nav.open {
+nav.open {
     right: 0;
-  }
+    z-index: 1000; /* メニューが開くときに最前面に表示 */
+}
+
 
   /* header CatchCopy */
-    header figure {
+    .main-visual figure {
         margin: auto 4rem;
     }
-    header figure p img {
+    .main-visual figure p img {
         max-width: 50%;
+        margin: 0 auto;
 
     }
-    header figure p {
+    .main-visual p {
         text-align: center;
         font-size: 2rem;
         margin: 0;
@@ -95,14 +108,18 @@ body {
         clip-path: inset(0 2% 0 0 round 0);
         overflow: hidden;
         padding: 4rem 6.2%;
+        position: relative;
+        z-index: 9;
         
     }
-    .videoWrapper video {
+    .vid {
         max-width: 100%;
         max-height: 100%;
         object-fit: cover;
         clip-path: inset(0 2% 0 0 round 0);
-
+        position: relative;
+        z-index: -1;
+        
     }
 
     /* wideWaterDrop */
@@ -175,6 +192,10 @@ body {
     }
 
     /* TripQuestとは？　セクション */
+    .TQ_description_outer {
+        background: linear-gradient(180deg, white, #61C3D3);
+    }
+
     .TQ_description {
         /* position: relative; */
         background: linear-gradient(180deg, #61C3D3,#7BD2E0,#C0E7ED);
@@ -228,10 +249,51 @@ body {
 
 
     /* 使い方　セクション */
+    .TQ_HowtoUse {
+        background: linear-gradient(180deg, #61C3D3, #B8E4EB);
+        color: white;
+    }
+    .HowtoUse_Container h2{
+        margin: 0;
+        padding: 35% 0 0 5rem;
+    }
+    .HowtoUse_Container p {
+        color: #01A2A3;
+        font-weight: 500;
+        margin: 0;
+        padding: 0 0 15% 5rem;
+    }
+    .swiper {
+        width: 30.5rem;
+        height: 77rem;
+        padding: 20% 0;
+        margin: 0;
+    }
 
+    .swiper-slide img {
+        max-width: 100%;
+        width: 75%;
+        margin: 0 10%;
+    }
+    .swiper-slide h3 {
+        text-align: center;
+    }
+    .swiper-slide h3 span {
+        color: #01A2A3;
+    }
+    .swiper-slide p {
+        color: white;
+        padding: 0 10%;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    
 
     /* TripQuestで雨の日を特別にしよう！　セクション */
-
+    .questList_Intro_outer {
+        background: linear-gradient(180deg ,#B8E4EB, white);
+    }
     .questList_Intro_inner {
         padding: 8rem 0 4rem 0 ;
 
@@ -244,12 +306,13 @@ body {
     }
     .questList_Intro_inner h2 {
         text-align: center;
-        margin: 0 2.5rem;
+        margin: 0 2.5rem ;
     }
 
     .questList_Intro_inner p {
         padding: 4rem 6.5rem 0 6.5rem ;
         margin: 0;
+        font-weight: 9px;
     }
     .questList_Intro_inner p strong {
         color: #01A2A3;
@@ -494,3 +557,88 @@ body {
             left: 25%;
         }
         
+        /*  TQ　Quest Button */
+        .TQQuestPageBtn_container {
+            padding: 0 0 4rem 0;
+            margin: 0 4rem;
+            width: 27.5rem;
+        }
+        .TQQuestPageBtn {
+            background-color: #01A2A3;
+            border-radius: 3rem;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0;
+        }
+        .TQQuestPageBtn p a {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bolder;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 0 0 0 4rem;
+        }
+        .TQQuestPageBtn div {
+            padding: 1.2rem 1rem 1rem 0;
+        }
+        .TQQuestPageBtn div img {
+            max-width: 3.8rem;
+        }
+        
+
+        /* TripQuestへGo Banner Button */
+        .banner_Button {
+            width: 35.2rem;
+            margin: 0 auto ;
+            padding: 0 0 40% 0;
+        }
+        .banner_Button a img{
+            max-width: 100%;
+
+        }
+
+
+        /* Footer */
+        .footer {
+            width: 27.4rem ;
+            margin: 0 auto;
+            position: relative;
+        }
+            /* Back to Top Button */
+            .BackToTop_Button {
+                max-width: 20%;
+                position: absolute;
+                right: -1%;
+                top: -55%;
+            }
+        .share_Container {
+            margin: 60% 0 40% 0;
+
+        }
+        .share_Container p{
+            font-size: 2.2rem;
+            text-align: center;
+            color: #01A2A3;
+            margin: 10% 0;
+            font-weight: bolder;
+        }
+        .SNS_Icons_Container {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 0;
+        }
+
+        .SNS_Icons_Container img {
+            max-width: 100%;
+            width: 25%;
+        }
+        .footer p  {
+            text-align: center;
+            color: #01A2A3;
+        }
+
+        
+
+
+        /* PC版　 */

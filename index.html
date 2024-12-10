@@ -8,6 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=BIZ+UDMincho&family=BIZ+UDPGothic&family=BIZ+UDPMincho&family=DotGothic16&family=Hachi+Maru+Pop&family=Hina+Mincho&family=IBM+Plex+Sans+JP&family=Kaisei+Decol&family=Kaisei+Opti&family=Klee+One&family=M+PLUS+1+Code:wght@100..700&family=M+PLUS+2:wght@100..900&family=Mochiy+Pop+One&family=Murecho:wght@100..900&family=New+Tegomin&family=Rampart+One&family=RocknRoll+One&family=Yuji+Boku&family=Yuji+Mai&family=Yuji+Syuku&family=Yusei+Magic&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+Antique&family=Zen+Kaku+Gothic+New&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <!-- swiper -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
     <title>TripQuest</title>
 </head>
 <body>
@@ -21,7 +28,7 @@
                 <div class="header__btn__line03 line"></div>
             </div>
     
-              <nav>
+              <nav id="#nav">
                 <ul>
                   <li><a href="#about">「雨」「自然」「旅」について</a></li>
                   <li><a href="#TQ_description">TripQuestとは？</a></li>
@@ -40,6 +47,8 @@
               </nav>
     
         </section>
+    </header>
+    <section class="main-visual">
         <!-- CatchCopy -->
         <figure>
             <p><img src="img/ametabiロゴ.png" alt="雨旅ロゴ"></p>
@@ -49,7 +58,7 @@
 
         <!--  KeyVisual Video -->
         <div class="videoWrapper">
-            <video autoplay loop muted>                    
+            <video class="vid" autoplay loop muted>                    
                 <source src="img/vid/KeyVisualMovie.mp4" type="video/mp4">
             </video>
         </div>
@@ -58,8 +67,7 @@
             <img src="img/headerWaterimg.png" alt="WideDropofWater">
         </picture>
 
-    
-    </header>
+    </section>
 
     <!-- wide water drop -->
     <main>
@@ -137,147 +145,156 @@
 
         <!-- TripQuestとは　セクション -->
             <!-- Bg -->
-            <section class="TQ_description"  id="TQ_description">
-        
-                <div class="TQ_description_inner">
-                    <h2>TripQuestとは？</h2>
-                        <p>一人旅を始めるには、不安や抵抗が多いと思いますが、</p>
-
-                        <p>TripQuestは、それらの抵抗を解消し
-                            「一人旅」をより自由に、「楽しく」
-                            させるためのサービスです</p>   
-
-                        <p>旅の目的を、Quest（ミッション型）
-                            にすることで、</p>  
-                        
-                        <p>旅への興味を持たせると同時に、その地への理解を深めることができます。</p>
-        
-         
-                    <!-- TripQuest本サイトに移行するボタン -->
-                    <div class="TQserviceBtn">
-                        <p><a href="#">TripQuestを体験しよう！</a></p>
-                        <div><a href="#"><img src="./img/btn1.png" alt="TripQuestへ移動ボタン"></a></div>  
+             <div class="TQ_description_outer">
+                <section class="TQ_description"  id="TQ_description">
+                    <div class="TQ_description_inner">
+                        <h2>TripQuestとは？</h2>
+                            <p>一人旅を始めるには、不安や抵抗が多いと思いますが、</p>
+    
+                            <p>TripQuestは、それらの抵抗を解消し
+                                「一人旅」をより自由に、「楽しく」
+                                させるためのサービスです</p>   
+    
+                            <p>旅の目的を、Quest（ミッション型）
+                                にすることで、</p>  
+                            
+                            <p>旅への興味を持たせると同時に、その地への理解を深めることができます。</p>
+            
+             
+                        <!-- TripQuest本サイトに移行するボタン -->
+                        <div class="TQserviceBtn">
+                            <p><a href="#">TripQuestを体験しよう！</a></p>
+                            <div><a href="#"><img src="./img/btn1.png" alt="TripQuestへ移動ボタン"></a></div>  
+                        </div>
                     </div>
-                </div>
-            </section>    
+                </section>        
+             </div>
         <!-- TripQuestとは　セクション -->    
     
         <!-- 使い方（TQ）　セクション -->
-         <div class="TQ_HowtoUse">
-            <section id="HowtoUse" class="HowtoUse">
+         <section class="TQ_HowtoUse">
+            <div id="HowtoUse" class="HowtoUse_Container">
                 <h2>使い方</h2>
                 <p>How to Use</p>
     
                     <!-- Steps セクション -->
-                        <!-- Step 1 -->
-                            <section>
-                                <img src="" alt="">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Step 1 -->
+                            <section class="swiper-slide">
+                                <img src="img/step1Img.png" alt="Step1 ユーザー登録ろく">
                                 <h3>
                                     Step 1 <br>
-                                    ユーザー登録
+                                    <span>ユーザー登録</span>
                                 </h3>
                                 <p>ユーザー登録をして、自分のことや旅の好みを設定しましょう！自分に合ったクエストをオススメとして表示！</p>
                             </section>
         
-                        <!-- Step 2 -->
-                        <section>
-                            <img src="" alt="">
-                            <h3>
-                                Step 2 <br>
-                                クエストを探そう！
-                            </h3>
-                            <p>Topページから、興味のあるクエストを探そう！ページ上部に検索タブからも検索可能！</p>
-                        </section>
+                            <!-- Step 2 -->
+                            <section class="swiper-slide">
+                                <img src="img/step2Img.png" alt="Step2 クエストを探そう！">
+                                <h3>
+                                    Step 2 <br>
+                                    <span>クエストを探そう！</span>
+                                </h3>
+                                <p>Topページから、興味のあるクエストを探そう！ページ上部に検索タブからも検索可能！</p>
+                            </section>
+            
+                            <!-- Step 3 -->
+                            <section class="swiper-slide">
+                                <img src="img/step3Img.png" alt="Step3 クエストを達成しよう！">
+                                <h3>
+                                    Step 3 <br>
+                                    <span>クエストを達成しよう！</span>
+                                </h3>
+                                <p>興味のあるクエストを選んだら、クエスト内容や達成条件を確認しよう！クエストによって、達成条件が異なります。<br>
+            
+                                    ＊クエスト遂行のためにユーザー登録ろくが必要！</p>
+                            </section>
         
-                        <!-- Step 3 -->
-                        <section>
-                            <img src="" alt="">
-                            <h3>
-                                Step 3 <br>
-                                クエストを達成しよう！
-                            </h3>
-                            <p>興味のあるクエストを選んだら、クエスト内容や達成条件を確認しよう！クエストによって、達成条件が異なります。<br>
+                            <!-- Step 4 -->
+                            <section class="swiper-slide">
+                                <img src="img/step4Img.png" alt="Step4 クエスト達成を記録に残そう！">
+                                <h3>
+                                    Step 4 <br>
+                                    <span>クエスト達成を記録に残そう！</span>
+                                </h3>
+                                <p>クエストで撮影した画像を記録し、ログとして記録される。クエストに対する感想やオススメなどをコメントとして記録されるので、ぜひ思ったことを共有しよう！<br>
+            
+                                    ＊ユーザー登録が必要なのでご注意！</p>
+                            </section>
         
-                                ＊クエスト遂行のためにユーザー登録ろくが必要！</p>
-                        </section>
-        
-                        <!-- Step 4 -->
-                        <section>
-                            <img src="" alt="">
-                            <h3>
-                                Step 4 <br>
-                                クエスト達成を記録に残そう！
-                            </h3>
-                            <p>クエストで撮影した画像を記録し、ログとして記録される。クエストに対する感想やオススメなどをコメントとして記録されるので、ぜひ思ったことを共有しよう！<br>
-        
-                                ＊ユーザー登録が必要なのでご注意！</p>
-                        </section>
+                        </div>
+    
+                    </div>
                     <!-- Steps セクション -->
     
-            </section>
-         </div>
+            </div>
+         </section>
         <!-- 使い方（TQ）　セクション -->
     
     
         <!-- TripQuestで雨の日を特別にしよう！　セクション -->
-        <section id="questList_Intro" class="questList_Intro">
-            <div class="questList_Intro_inner">
-                <h2>TripQuestを通じて、雨の日を
-                    特別な日にしよう！</h2>
-        
-                <p>雨の日のネガティブなイメージを、TripQuestで、<strong>ポジティブ</strong>なイメージにしよう！</p>
-        
-                <p> 雨を利用し、自分と振り返る機会にして、振り返った体験や経験を活かし、より<strong>豊かな人生を送ろう！</strong></p>
+         <div class="questList_Intro_outer">
+            <section id="questList_Intro" class="questList_Intro">
+                <div class="questList_Intro_inner">
+                    <h2>TripQuestを通じて、雨の日を
+                        特別な日にしよう！</h2>
             
-
-                        <!-- 各クエストへのアンカーリンク　ボタン -->
-                        <section id="questList" class="questList">
-                                <h3>雨のQuest</h3>
-                                <div class="questList_inner">
-                                    <!-- Quest１ -->
-                                    <div class="questList_btn">
-                                        <a href="">
-                                        <div class="btn-name">
-                                            <p><strong>雨の日に四季を感じて絵で記録せよ！</strong></p>
-                                            <p><img src="img/locationPin.png" alt="locationPin"><small>舎人公園,東京都足立区 </small></p>
+                    <p>雨の日のネガティブなイメージを、TripQuestで、<strong>ポジティブ</strong>なイメージにしよう！</p>
+            
+                    <p> 雨を利用し、自分と振り返る機会にして、振り返った体験や経験を活かし、より<strong>豊かな人生を送ろう！</strong></p>
+                
+    
+                            <!-- 各クエストへのアンカーリンク　ボタン -->
+                            <section id="questList" class="questList">
+                                    <h3>雨のQuest</h3>
+                                    <div class="questList_inner">
+                                        <!-- Quest１ -->
+                                        <div class="questList_btn">
+                                            <a href="#">
+                                            <div class="btn-name">
+                                                <p><strong>雨の日に四季を感じて絵で記録せよ！</strong></p>
+                                                <p><img src="img/locationPin.png" alt="locationPin"><small>舎人公園,東京都足立区 </small></p>
+                                            </div>
+                                            <!-- Arrow Down ボタン -->
+                                            <span><img src="img/btn2.png" alt="雨の日に四季を感じて絵で記録せよ！へボタン"></span>
+                                            </a>
                                         </div>
-                                        <!-- Arrow Down ボタン -->
-                                        <span><img src="img/btn2.png" alt="雨の日に四季を感じて絵で記録せよ！へボタン"></span>
-                                        </a>
-                                    </div>
-            
-                                    <!-- Quest２ -->
-                                    <div class="questList_btn">
-                                        <div class="btn-name">
+                
+                                        <!-- Quest２ -->
+                                        <div class="questList_btn">
+                                            <div class="btn-name">
+                                                <a href="">
+                                                    <p><strong>雨の農業を見学し、ご飯を食べよう！</strong></p>
+                                                    <p><img src="img/locationPin.png" alt="locationPin"><small>足立区農業公園,東京都足立区</small></p>
+                                            </div>
+                                            <!-- Arrow Down ボタン -->
+                                            <span><img src="img/btn2.png" alt="雨の日に四季を感じて絵で記録せよ！へボタン"></span>
+    
+                                            </a>
+                                        </div>
+                
+                                        <!-- Quest３ -->
+                                        <div class="questList_btnQ3">
                                             <a href="">
-                                                <p><strong>雨の農業を見学し、ご飯を食べよう！</strong></p>
-                                                <p><img src="img/locationPin.png" alt="locationPin"><small>足立区農業公園,東京都足立区</small></p>
+                                            <div class="btn-nameQ3">
+                                                <p><strong>傘を持って、四葉のクローバーを<br>
+                                                    探し求めよう！</strong></p>
+                                                <p><img src="img/locationPin.png" alt="locationPin"><small>新宿付近,東京都新宿区</small></p>
+                                            </div>
+                                            <!-- Arrow Down ボタン -->
+                                            <span><img src="img/btn2.png" alt="雨の日に四季を感じて絵で記録せよ！へボタン"></span>
+                                            </a>
                                         </div>
-                                        <!-- Arrow Down ボタン -->
-                                        <span><img src="img/btn2.png" alt="雨の日に四季を感じて絵で記録せよ！へボタン"></span>
-
-                                        </a>
                                     </div>
             
-                                    <!-- Quest３ -->
-                                    <div class="questList_btnQ3">
-                                        <a href="">
-                                        <div class="btn-nameQ3">
-                                            <p><strong>傘を持って、四葉のクローバーを<br>
-                                                探し求めよう！</strong></p>
-                                            <p><img src="img/locationPin.png" alt="locationPin"><small>新宿付近,東京都新宿区</small></p>
-                                        </div>
-                                        <!-- Arrow Down ボタン -->
-                                        <span><img src="img/btn2.png" alt="雨の日に四季を感じて絵で記録せよ！へボタン"></span>
-                                        </a>
-                                    </div>
-                                </div>
-        
-                        </section>
-                        <!-- 各クエストへのアンカーリンク　ボタン -->
-            </div>                                 
-
-        </section>
+                            </section>
+                            <!-- 各クエストへのアンカーリンク　ボタン -->
+                </div>                                 
+    
+            </section>    
+         </div>
         <!-- TripQuestで雨の日を特別にしよう！　セクション -->
     
     
@@ -365,167 +382,237 @@
                         <img src="img/peekQ1.png" alt="Have a peek of Quest 1">
                     </figure>
                     <!-- TripQuest本サイトに移行するボタン -->
-                    <div class="TQQuestPageBtn">
-                        <p><a href="#">Quest1を体験しよう！</a></p>
-                        <div><a href="#"><img src="./img/btn1.png" alt="TripQuestへ移動ボタン"></a></div>  
-                    </div>
+                    <section class="TQQuestPageBtn_container"> 
+                        <div class="TQQuestPageBtn">
+                            <p><a href="#">Quest1を体験しよう！</a></p>
+                            <div><a href="#"><img src="./img/btn3.png" alt="TripQuestへ移動ボタン"></a></div>  
+                        </div>    
+                    </section>
                 </div>
          </section>
         <!-- Quest 1　セクション -->
     
         <!-- Quest 2　セクション -->
-        <section id="about_Q2">
+        <section id="about_Q2" class="Quest_info">
+            
+            <h2>Quest 2 <img src="img/questTitleIcon.png" alt="iconDesign"></h2>
+            <!--　クエスト内容・体験説明  -->
+            <div class="Quest_info_container">
+                <div class="quest_Description">  
+                    <h3>雨の農業を見学し、<br>
+                        ご飯を食べよう！</h3>
 
-                <h2>Quest 2</h2>            
+                        <div class="border">
+                            <img src="img/borderDesign.png" alt="borderdesign">
+                        </div>
         
-                <!--　クエスト内容・体験説明  -->
-                <div>  
-                    <h3>雨の農業を見学し、ご飯を食べよう！</h3>
                         <figure>
                             <!-- Quest related Img -->
-                            <img src="" alt="">
+                             <img src="img/Q2_Img2.png" alt="Quest1　画像">
                             <p>
-                                足立区農業公園で、農業を実感し、施設内で育てられた作物の料理を食べよう！                    </p>
+                                足立区農業公園で、農業を実感し、施設内で育てられた作物の料理を食べよう！
+                            </p>
                         </figure>
-        
+            
                             <p>
-                                農業を体験することで、雨の日でも農家たちの仕事への頑張りや、作物をどんな思いで育てられたかを知って欲しい。
-                                この体験で得た経験や思いを、自分と重ね合わせて、「前向きに明日を進む」マインドセットにしたい。
+                                農業を体験することで、雨の日でも農家たちの仕事への頑張りや、作物をどんな思いで育てられたかを知って欲しい。<br>
+                                この体験で得た経験や思いを、自分と重ね合わせて、「前向きに明日を進む」マインドセットにしたい。<br>
                                 施設内で育てられた新鮮な野菜を味わい、「食」への美味しさを感じ、元気をもらうことで、これから頑張れる気力を生み出そう！
                             </p>
                 </div>
-        
+
+                    <!-- Border -->
+                        <div class="border">
+                            <img src="img/borderDesign.png" alt="borderdesign">
+                        </div>
+                    <!-- Border -->
+
                     <!--　スポット情報 -->
-                        <div>
-                            <h4>ADACHI AGRICULTURAL PARK</h4>  
-                            <p><small>足立区農業公園</small></p>
+                        <div class="Spot_Info">
+                            <div class="Spot_Info_title">
+                                <p><small>足立区農業公園</small></p>
+                                <h4>ADACHI <br>
+                                    AGRICULTURAL <br>
+                                    PARK <br>
+                                </h4>
+                            </div>
                             <figure>
-                                <!-- img -->
-                                <img src="" alt="">
+                                <img src="img/Spot2.png" alt="舎人公園">
                             </figure>
                             <!-- スポット説明 -->
                             <p>
                                 この施設は、足立区の農業を保存するために作られた施設です。
-        
-                                （自然に学ぶ、自然と遊ぶ、自然と共に生きる）
-                                
+                                <br>
+                                <small>（自然に学ぶ、自然と遊ぶ、自然と共に生きる）                                </small>
+                                <br>
                                 自然の様々な仕組みを学び、見習って、それらを受け入れる施設になっている。農業体験や植物、生き物のふれあい体験などの様々なプログラムを組み、新たな知識や経験を得られる特別な施設です。
                             </p>
                         </div>
-        
+                        
+                    <!-- Border -->
+                    <div class="border">
+                        <img src="img/borderDesign.png" alt="borderdesign">
+                    </div>
+                    <!-- Border -->
+
                     <!-- 達成条件 -->
-                        <div>
+                        <div class="clear_Requirement">
                             <h4>達成条件</h4>
                             <figure>
                                 <!-- img -->
-                                <img src="" alt="">
+                                <img src="img/clearRequirementImg2.png" alt="Quest1クリア条件">
                             </figure>
+                            <div class="clear_Requirement_Info">
+                                <p>足立区農業公園の見学が終わったら、<strong>「キッチンとれたて」</strong>の2階で新鮮な野菜料理を食べよう！会計後に店員から<strong>バーコード</strong>をもらい、読み込んでもらうとQuest達成！<br></p>
+                            </div>
+                        </div>
+                
+                <!-- Border -->
+                <div class="border">
+                    <img src="img/borderDesign.png" alt="borderdesign">
+                </div>
+                <!-- Border -->
+                
+                <!-- TQサイトのクエスト本体に移行するボタン -->
+
+                <figure class="questPeek">
+                    <p>Have a <br>
+                        peek of <br>
+                        Quest 2</p>
+                    <img src="img/peekQ2.png" alt="Have a peek of Quest 2">
+                </figure>
+                <!-- TripQuest本サイトに移行するボタン -->
+                <section class="TQQuestPageBtn_container"> 
+                    <div class="TQQuestPageBtn">
+                        <p><a href="#">Quest2を体験しよう！</a></p>
+                        <div><a href="#"><img src="./img/btn3.png" alt="TripQuestへ移動ボタン"></a></div>  
+                    </div>    
+                </section>
+            </div>
+     </section>
+    <!-- Quest 2　セクション -->
+
+
+        <!-- Quest 3　セクション -->
+        <section id="about_Q3" class="Quest_info">
+            
+            <h2>Quest 3 <img src="img/questTitleIcon.png" alt="iconDesign"></h2>
+            <!--　クエスト内容・体験説明  -->
+            <div class="Quest_info_container">
+                <div class="quest_Description">  
+                    <h3>傘を持って、四葉のクローバー<br>
+                        を探し求めようよう！</h3>
+
+                        <div class="border">
+                            <img src="img/borderDesign.png" alt="borderdesign">
+                        </div>
+        
+                        <figure>
+                            <!-- Quest related Img -->
+                             <img src="img/Q3_Img3.png" alt="Quest3　画像">
                             <p>
-                                足立区農業公園の見学が終わったら、<strong>「キッチンとれたて」</strong>の2階で新鮮な野菜料理を食べよう！会計後に店員から<strong>バーコード</strong>をもらい、読み込んでもらうとQuest達成！                    
+                                新宿付近の自然を散策しながら「幸せの印」クローバーを探し求めよう！
+                            </p>
+                        </figure>
+            
+                            <p>
+                                新宿をスタート地点にして、新宿付近の自然のある公共施設（公園や屋上庭園など）を散策しよう！四葉を探し求めてる間に、今まで自分は幸せだったかを、自分の心の声と会話ができる。四葉を探し終えた後に、少しでも自分が「幸せになれる！」気持ちを得よう！                            </p>
+                </div>
+
+                    <!-- Border -->
+                        <div class="border">
+                            <img src="img/borderDesign.png" alt="borderdesign">
+                        </div>
+                    <!-- Border -->
+
+                    <!--　スポット情報 -->
+                        <div class="Spot_Info">
+                            <div class="Spot_Info_title">
+                                <p><small>新宿付近</small></p>
+                                <h4>
+                                    SHINJUKU AREA
+                                </h4>
+                            </div>
+                            <figure>
+                                <img src="img/Spot3.png" alt="新宿付近">
+                            </figure>
+                            <!-- スポット説明 -->
+                            <p>
+                                新宿は繁華街や高層ビルなどが盛んな町が、自然に溢れてる町でもある。（新宿御苑、明治神宮外苑、新宿内屋上庭園など）騒がしい都会生活に、癒しを感じる場所がたくさんあり、いつでもアクセスできる！
                             </p>
                         </div>
-            
-                <!-- TQサイトのクエスト本体に移行するボタン -->
-                <h3>Have a peek of Quest 2</h3>
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                    <!-- ボタン -->
-                    <div>
-                        <a href="#">Quest 2を体験しよう！</a>
+                        
+                    <!-- Border -->
+                    <div class="border">
+                        <img src="img/borderDesign.png" alt="borderdesign">
                     </div>
+                    <!-- Border -->
 
-        </section>
-        <!-- Quest 2　セクション -->
-    
-    
-        <!-- Quest 3　セクション -->
-        <section id="about_Q3">
-            <h2>Quest 3</h2>            
-    
-            <!--　クエスト内容・体験説明  -->
-            <div>  
-                <h3>傘を持って、四葉のクローバーを探し求めよう！</h3>
-                    <figure>
-                        <!-- Quest related Img -->
-                        <img src="" alt="">
-                        <p>
-                            新宿付近の自然を散策しながら「幸せの印」クローバーを探し求めよう！                </p>
-                    </figure>
-        
-                        <p>
-                            新宿をスタート地点にして、新宿付近の自然のある公共施設（公園や屋上庭園など）を散策しよう！四葉を探し求めてる間に、今まで自分は幸せだったかを、自分の心の声と会話ができる。四葉を探し終えた後に、少しでも自分が「幸せになれる！」気持ちを得よう！                
-                        </p>
-            </div>
-        
-                <!--　スポット情報 -->
-                    <div>
-                        <h4>SHINJUKU AREA</h4>
-                        <p><small>新宿付近</small></p>
-                        <figure>
-                            <!-- img -->
-                            <img src="" alt="">
-                        </figure>
-                        <!-- スポット説明 -->
-                        <p>
-                            新宿は繁華街や高層ビルなどが盛んな町が、自然に溢れてる町でもある。（新宿御苑、明治神宮外苑、新宿内屋上庭園など）騒がしい都会生活に、癒しを感じる場所がたくさんあり、いつでもアクセスできる！                
-                        </p>
-                    </div>
-        
-                <!-- 達成条件 -->
-                    <div>
-                        <h4>達成条件</h4>
-                        <figure>
-                            <!-- img -->
-                            <img src="" alt="">
-                        </figure>
-                        <p>
-                            新宿駅をスタート地点とし、新宿の公園４つを選んだら、四葉の印を散策しよう！<strong>四葉４つの写真</strong>と<strong>歩数7000Step</strong>の記録を投稿してQuest達成！
-                        </p>
-                    </div>
-    
-            <!-- TQサイトのクエスト本体に移行するボタン -->
-            <h3>Have a peek of Quest 3</h3>
-            <figure>
-                <img src="" alt="">
-            </figure>
-                <!-- ボタン -->
-                <div>
-                    <a href="#">Quest 3を体験しよう！</a>
+                    <!-- 達成条件 -->
+                        <div class="clear_Requirement">
+                            <h4>達成条件</h4>
+                            <figure>
+                                <!-- img -->
+                                <img src="img/clearRequirement3.png" alt="Quest3クリア条件">
+                            </figure>
+                            <div class="clear_Requirement_Info">
+                                <p>
+                                    新宿駅をスタート地点とし、新宿の公園４つを選んだら、四葉の印を散策しよう！<strong>四葉４つの写真</strong>と<strong>歩数7000Step</strong>の記録を投稿してQuest達成！
+
+                                </p>
+                            </div>
+                        </div>
+                
+                <!-- Border -->
+                <div class="border">
+                    <img src="img/borderDesign.png" alt="borderdesign">
                 </div>
-            
-            </section>
-        <!-- Quest 3　セクション -->
-    
-    
+                <!-- Border -->
+                
+                <!-- TQサイトのクエスト本体に移行するボタン -->
+
+                <figure class="questPeek">
+                    <p>Have a <br>
+                        peek of <br>
+                        Quest 3</p>
+                    <img src="img/peekQ3.png" alt="Have a peek of Quest 3">
+                </figure>
+                <!-- TripQuest本サイトに移行するボタン -->
+                <section class="TQQuestPageBtn_container"> 
+                    <div class="TQQuestPageBtn">
+                        <p><a href="#">Quest3を体験しよう！</a></p>
+                        <div><a href="#"><img src="./img/btn3.png" alt="TripQuestへ移動ボタン"></a></div>  
+                    </div>    
+                </section>
+            </div>
+     </section>
+    <!-- Quest 3　セクション -->
+
         <!-- TripQuestへGo ボタン　セクション -->
-        <h1>Questで明日に向かって幸せになろう！</h1>
-                <a href="#">
-                    <!-- TripQuestへGo　ボタンは丸ごと画像！ -->
-                    <img src="" alt="">
-                </a>
+         <div class="banner_Button">
+            <a href="#">
+                <!-- TripQuestへGo　ボタンは丸ごと画像！ -->
+                <img src="img/BannerButton.png" alt="Questで明日に向かって幸せになろう！">
+            </a>
+         </div>
     
     </main>
 
-    <footer>
+    <footer class="footer">
         <!-- BacktoTop Button -->
-         <div>
-            <span>
-                <!-- icon -->
-            </span>
-            <p>TOP</p>    
-         </div>
+            <img src="img/BackToTop Btn.png" alt="TOPへ戻るボタン" class="BackToTop_Button" >
 
         <!-- Share -->
-         <div>
+         <div class="share_Container">
             <p>Share</p>
             <!-- SNS Icons -->
-            <figure>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+            <figure class="SNS_Icons_Container">
+                <img src="img/InstaIcon.png" alt="Instagramへシェアボタン">
+                <img src="img/LINE.png" alt="LINEへシェアボタン">
+                <img src="img/X.png" alt="X（Twitter）へシェアボタン">
             </figure>
          </div>
+
          <p><a href="#"><img src="img/TripQuestLogo.png" alt="TripQuestロゴ"></a></p>
          <p><small>Copyright &copy; TripQuest All Rights Reserved</small></p>
     </footer>
