@@ -1,44 +1,82 @@
 html {
     font-family: "Zen Maru Gothic", serif;
     font-style: normal;
+    font-weight: 400;
     font-size: 62.5%;
     margin: 0;
   }
-
-body {
+  
+  body {
     font-size: 1.6em;
-    margin: 0;
-}
-
-img{
+    width: 402px;
+    margin: 0 auto;
+  }
+  
+  img {
     display: block;
-}
-
-video{
+  }
+  
+  video {
     display: block;
-}
-/* Hamburger Menu */
+  }
+  
+  /* Animations */
+    /* Slide Up */
+    .slideUp {
+      animation-name: slideUp_Animation;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+    @keyframes slideUp_Animation {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
 
-.hamburger_Container {
+    /* PopAnimation */
+    @keyframes popAnimation {
+      0% {
+        opacity: 0;
+        scale: 0;
+      }
+      100% {
+        opacity: 1;
+        scale: 1;
+      }
+    }
+      
+  /* Hamburger Menu */
+  .hamburger_Container {
     display: flex;
     justify-content: space-between;
     padding: 4rem 2.5rem 0 2.5rem;
-    position: sticky;
-}
-.header__btn {
+    z-index: 1002;
+
+  }
+  
+  .header__btn {
     width: 48px;
     height: 24px;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    right: 7%;
     z-index: 1001;
     cursor: pointer;
   }
-  
   .line {
-    height: 2px;
+    height: 3px;
     width: 100%;
+    border-radius: 11%;
     background-color: #61C3D3;
     display: block;
     transition: all 0.3s ease-in-out;
@@ -51,7 +89,8 @@ video{
   .header__btn__line03 {
     transform-origin: left bottom;
   }
-  
+
+
   .header__btn__line01.open {
     transform: rotate(25deg) translate(0, 1px);
     background-color: white;
@@ -65,580 +104,833 @@ video{
     transform: rotate(-25deg) translate(0, -1px);
     background-color: white;
   }
+  
   nav {
     position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background-color: #61C3D3;
     background: linear-gradient(180deg, #61C3D3, #7BD2E0, #C0E7ED);
-    transition: right 0.5s ease;
-    z-index: 1000;  /* これを追加して他の要素より前面に表示 */
-}
-
+    transition: right 0.7s ease;
+    z-index: 1000;
+    /* これを追加して他の要素より前面に表示 */
+  }
   
-nav.open {
+  
+  nav.open {
     right: 0;
-    z-index: 1000; /* メニューが開くときに最前面に表示 */
-}
+    z-index: 1000;
+    /* メニューが開くときに最前面に表示 */
+  }
+  
+  
+  
+  /* Hamburger Menu Style */
+   #nav ul {
+    list-style-type: none;
+    margin: 8rem 6%;
+    padding: 0;
+  }
+  #nav ul li p {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #01A2A3;
+    margin: 1.5rem 0 0 0;
+    
+  }
+  #nav ul li p a{
+    text-decoration: none;
+    color: white;
+    font-size: 2.2rem;
+  }
+  #nav ul li .quest_nav_title {
+    margin: 0 0 0 0;
+    font-weight: 700;
+  }
+  #nav ul li p .quest_nav {
+    font-size: 2rem;
+  }
 
 
   /* header CatchCopy */
-    .main-visual figure {
-        margin: auto 4rem;
+  .main-visual figure {
+    margin: auto 4rem;
+  }
+  
+  .main-visual figure p img {
+    max-width: 50%;
+    margin: 0 auto;
+  
+  }
+  
+  .main-visual p {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    padding: 4rem 0 0 0;
+  }
+  
+  /* Key Visual Video */
+  
+  .RainDrop p {
+    position: fixed;
+    right: 30%;
+    top: 45%;
+    /* z-index: 998; */
+  }
+
+  .videoWrapper {
+    max-width: 110%;
+    /* Adjust width as needed */
+    max-height: 100%;
+    /* Adjust height as needed */
+    clip-path: inset(0 2% 0 0 round 0);
+    overflow: hidden;
+    padding: 4rem 6.2%;
+    position: relative;
+    z-index: -998;
+  
+  }
+  
+  .vid {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    clip-path: inset(0 2% 0 0 round 0);
+    position: relative;
+    z-index: -998;
+  
+  }
+  
+  /* wideWaterDrop */
+  .wideWaterDrop img {
+    width: 100%;
+    height: auto;
+    padding: 4rem 0 3rem 0;
+  }
+
+    /* WideWater Animation Code */
+    .wideWaterDrop_animation {
+      animation-name: wideWaterDrop_animation;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-delay: 0s;
+      opacity: 0;
     }
-    .main-visual figure p img {
-        max-width: 50%;
-        margin: 0 auto;
+    @keyframes wideWaterDrop_animation {
+      0%{
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0);
 
-    }
-    .main-visual p {
-        text-align: center;
-        font-size: 2rem;
-        margin: 0;
-        padding: 4rem 0 0 0;
-    }
-
-    /* Key Visual Video */
-
-    .videoWrapper {
-        max-width: 110%; /* Adjust width as needed */
-        max-height: 100% ; /* Adjust height as needed */
-        clip-path: inset(0 2% 0 0 round 0);
-        overflow: hidden;
-        padding: 4rem 6.2%;
-        position: relative;
-        z-index: 9;
-        
-    }
-    .vid {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
-        clip-path: inset(0 2% 0 0 round 0);
-        position: relative;
-        z-index: -1;
-        
-    }
-
-    /* wideWaterDrop */
-    .wideWaterDrop img {
-        width: 100%;
-        height: auto;
-        padding: 4rem 0 3rem 0 ;
-    }
-
-    /* ABOUT Section */
-    .about p {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: bold;
-        color: #01A2A3;
-        margin: 0;
-    }
-    .about_list{
-        margin: 0 0 4rem 0;
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
-        padding: 0;
-        font-size: 3.2rem;
-        font-weight: bolder;
-        }
-
-
-    /* Droplet Border1 */
-    .dropletBorder1 {
-        width: 8.6rem;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-    }
-    .droplet_Small img{
-        width: 1.3rem;
-        padding: 0.8rem 0 0 0;
-    }
-
-    .droplet_Large img{
-        width: 2rem;
-    }
-
-
-
-    /* about info */
-    .about_container {
-        margin: 0 2.5rem ;
-        padding: 4rem 0 16rem 0;
+      }
     }
 
-    .about p {
-        font-size: 2rem;
+  /* ABOUT Section */
+  .about p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #01A2A3;
+    margin: 0;
+    /* animation */
+    animation-name: slideUp_Animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    opacity: 0;
+  }
+  
+  .about_list {
+    margin: 0 0 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    font-size: 3.2rem;
+    font-weight: bolder;
+    text-shadow: 
+    0.2px 0.2px 0 black,  /* 右下 */
+    -0.2px 0.2px 0 black, /* 左下 */
+    0.2px -0.2px 0 black, /* 右上 */
+    -0.2px -0.2px 0 black; /* 左上 */
+   }  
+  
+  /* Droplet Border1 */
+  .dropletBorder1 {
+    width: 8.6rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .droplet_Small img {
+    width: 1.3rem;
+    padding: 0.8rem 0 0 0;
+  }
+  
+  .droplet_Large img {
+    width: 2rem;
+  }
+  
+  
+  /* about info */
+  .about_container {
+    margin: 0 2.5rem;
+    padding: 4rem 0 16rem 0;
+    z-index: 1004;
+  }
+  
+  .about p {
+    font-size: 2rem;
+    text-shadow: 
+    0.2px 0.2px 0 #01A2A3,  /* 右下 */
+    -0.2px 0.2px 0 #01A2A3, /* 左下 */
+    0.2px -0.2px 0 #01A2A3, /* 右上 */
+    -0.2px -0.2px 0 #01A2A3; /* 左上 */
+
+  }
+  
+  .aboutInfo {
+    margin: auto 4rem;
+  }
+  
+  .aboutInfo h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #01A2A3;
+    margin: 4rem 0 2rem 0;
+    text-shadow: 
+    0.1px 0.1px 0 #01A2A3,  /* 右下 */
+    -0.1px 0.1px 0 #01A2A3, /* 左下 */
+    0.1px -0.1px 0 #01A2A3, /* 右上 */
+    -0.1px -0.1px 0 #01A2A3; /* 左上 */
+
+  }
+  
+  .aboutInfo picture img {
+    max-width: 100%;
+    padding: 2rem 0 4rem 0;
+  
+  }
+  
+  /* TripQuestとは？　セクション */
+  .TQ_description_outer {
+    background: linear-gradient(180deg, white, #61C3D3);
+  }
+  .TQ_description {
+    /* position: relative; */
+    background: linear-gradient(180deg, #61C3D3, #7BD2E0, #C0E7ED);
+    border-radius: 4rem;
+  }
+    /* Animation */
+    .TQ_description_Animation {
+      animation-name: TQ_description_animation;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-delay: 0s;
+      opacity: 0;
+    }
+    @keyframes TQ_description_animation {
+      0%{
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0);
+
+      }
     }
 
-    .aboutInfo {
-        margin: auto 4rem;
-    }
-    .aboutInfo h2 {
-        text-align: center;
-        font-size: 2.6rem;
-        color: #01A2A3;
-        margin: 4rem 0 2rem 0;
-    }
-    .aboutInfo picture img {
-        max-width: 100%;
-        padding: 2rem 0 4rem 0;
-        
-    }
-
-    /* TripQuestとは？　セクション */
-    .TQ_description_outer {
-        background: linear-gradient(180deg, white, #61C3D3);
-    }
-
-    .TQ_description {
-        /* position: relative; */
-        background: linear-gradient(180deg, #61C3D3,#7BD2E0,#C0E7ED);
-        border-radius: 4rem;
-    }
-    .TQ_description_inner {
-        padding: 8rem 5rem;
-        color: white;
-    }
-    .TQ_description_inner h2 {
-        margin: 0;
-        padding-bottom: 2rem;
-        font-weight: bolder;
-    }
-    .TQ_description_inner p {
-        padding: 1.5rem 1.5rem;
-        margin: 0;
-
-    }
-    
-    /* TQ移行ボタン */
-    .TQserviceBtn {
-        background-color: white;
-        border-radius: 3rem;
-        margin: 4rem 0 2rem 0;
-        display: flex;
-        justify-content: space-between;
-    }
-    .TQserviceBtn p a {
-        color: black;
-        font-size: 1.4rem;
-        font-weight: bolder;
-        list-style-type: none;
-        text-decoration: none;
-        padding: 0 0 0 4rem;
-    }
-
-    .TQserviceBtn p {
-        padding: 2rem 0;
-    }
-
-    .TQserviceBtn div {
-        padding: 1.2rem 1rem 1rem 0 ;
-    }
-
-    .TQserviceBtn div img {
-        width: 3.8rem;
-    }
-
-    
+  .TQ_description_inner {
+    padding: 8rem 5rem;
+    color: white;
+  }
+  .TQ_description_inner_Animation {
+    animation-name: TQ_description_animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+  }
 
 
-    /* 使い方　セクション */
-    .TQ_HowtoUse {
-        background: linear-gradient(180deg, #61C3D3, #B8E4EB);
-        color: white;
-    }
-    .HowtoUse_Container h2{
-        margin: 0;
-        padding: 35% 0 0 5rem;
-    }
-    .HowtoUse_Container p {
-        color: #01A2A3;
-        font-weight: 500;
-        margin: 0;
-        padding: 0 0 15% 5rem;
-    }
-    .swiper {
-        width: 30.5rem;
-        height: 77rem;
-        padding: 20% 0;
-        margin: 0;
-    }
+  .TQ_description_inner h2 {
+    margin: 0;
+    padding-bottom: 2rem;
+    font-weight: bolder;
+    text-shadow: 
+    0.2px 0.2px 0 white,  /* 右下 */
+    -0.2px 0.2px 0 white, /* 左下 */
+    0.2px -0.2px 0 white, /* 右上 */
+    -0.2px -0.2px 0 white; /* 左上 */
 
-    .swiper-slide img {
-        max-width: 100%;
-        width: 75%;
-        margin: 0 10%;
-    }
-    .swiper-slide h3 {
-        text-align: center;
-    }
-    .swiper-slide h3 span {
-        color: #01A2A3;
-    }
-    .swiper-slide p {
-        color: white;
-        padding: 0 10%;
-        font-size: 1.4rem;
-        text-align: center;
-    }
-
-    
-
-    /* TripQuestで雨の日を特別にしよう！　セクション */
-    .questList_Intro_outer {
-        background: linear-gradient(180deg ,#B8E4EB, white);
-    }
-    .questList_Intro_inner {
-        padding: 8rem 0 4rem 0 ;
-
-    }
-    .questList_Intro {
-        background: linear-gradient(180deg, #61C3D3,#ADFDDB);
-        border-radius: 4rem;
-        color: white;
-
-    }
-    .questList_Intro_inner h2 {
-        text-align: center;
-        margin: 0 2.5rem ;
-    }
-
-    .questList_Intro_inner p {
-        padding: 4rem 6.5rem 0 6.5rem ;
-        margin: 0;
-        font-weight: 9px;
-    }
-    .questList_Intro_inner p strong {
-        color: #01A2A3;
-        font-weight: bold;
-
-    }
+  }
+  
+  .TQ_description_inner p {
+    padding: 1.5rem 1.5rem;
+    margin: 0;
+  
+  }
+  
+  /* TQ移行ボタン */
+  .TQserviceBtn{
+    background-color: white;
+    border-radius: 3rem;
+    margin: 4rem 0 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+  }
+  .TQserviceBtn_Animation {
+    animation-name: popAnimation;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+  }
 
 
-        /* QuestList BTN */
-        .questList_Intro .questList {
-            margin: 3rem 2.5rem;
-            border: 3px dotted #61C3D3;       
-            border-radius: 4rem;
-         }       
-
-        .questList_Intro .questList h3{
-            text-align: center;
-            margin: 1rem 0;
-            font-size: 2.2rem;
-        }
-
-        .questList_Intro .questList .questList_inner {
-            color: white;
-        }
-
-        .questList_Intro  .questList_btn, .questList_btnQ3 {
-            border:solid 2px #01A2A3;
-            background:rgb(255, 255, 255, 0.5);
-            text-align:center;
-            padding:15px 0;
-            border-radius: 30px;
-            margin: 2rem 2.5rem;
-            position: relative;
-        }
-        
-        .questList_Intro  .questList_btn a, .questList_btnQ3  a {
-            text-decoration: none;
-        }
-        .questList_Intro  .questList_btn   p {
-            margin: 0;
-            padding: 0 0 0 1.5rem;
-            text-align: left;
-            font-weight: bold;
-            letter-spacing: -0.5px;
-        }
-        .questList_Intro  .questList_btn  .btn-name p strong {
-            font-size: 1.4rem;
-            color: black;
-        }
-        .questList_Intro  .questList_btn   .btn-name p small {
-            color: #01A2A3;
-            font-size: 1.2rem;
-            margin: 0;
-            padding-left: 1.6rem;
-        }
-        .questList_Intro  .questList_btn   .btn-name p  img{
-            width: 1.2rem;
-            position: absolute;
-            top: 58%;
-        }
-
-        .questList_Intro  .questList_btn a span {
-            position: absolute;
-            top: 25%;
-            right: 3%;
-        }
-        .questList_Intro  .questList_btn a span img {
-            width: 3.8rem;
-        }
-            /* Quest List Btn Quest 3 part */
-            .questList_Intro  .questList_btnQ3  .btn-nameQ3 p {
-                margin: 0;
-                padding: 0 0 0 1.5rem;
-                text-align: left;
-                }
-            .questList_Intro  .questList_btnQ3  .btn-nameQ3 p strong {
-                font-size: 1.4rem;
-                color: black;
-            }
-            .questList_Intro  .questList_btnQ3   .btn-nameQ3 p small {
-                color: #01A2A3;
-                font-size: 1.2rem;
-                margin: 0;
-                padding-left: 1.6rem;
-            }
-            .questList_Intro  .questList_btnQ3   .btn-nameQ3 p  img{
-                width: 1.2rem;
-                position: absolute;
-                top: 68%;
-            }
-            .questList_Intro  .questList_btnQ3 a span {
-                position: absolute;
-                top: 35%;
-                right: 3%;
-            }
-            .questList_Intro  .questList_btnQ3 a span img {
-                width: 3.8rem;
-            }
-    
+  .TQserviceBtn p a {
+    color: black;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0 0 0 4rem;    
+    text-shadow: 
+    0.1px 0.1px 0 #000000,  /* 右下 */
+    -0.1px 0.1px 0 #000000, /* 左下 */
+    0.1px -0.1px 0 #010101, /* 右上 */
+    -0.1px -0.1px 0 #000000; /* 左上 */
 
 
-    /* Quest 説明 */
-    .Quest_info {
-        margin: 50% 2.5rem;
-        color: white;
-    }
-    .Quest_info h2{
-        background-color: #01A2A3;
-        border-radius: 4rem;
-        text-align: center;
-        margin: 0 7.5rem;
-        padding: 2rem 1rem;
-        position: relative;
-    }
+  }
+  
+  .TQserviceBtn p {
+    padding: 2rem 0;
+  }
+  
+  .TQserviceBtn div {
+    padding: 1.2rem 1rem 1rem 0;
+  }
+  
+  .TQserviceBtn div img {
+    width: 3.8rem;
+  }
+  
+  
+  
+  
+  /* 使い方　セクション */
+  .TQ_HowtoUse {
+    background: linear-gradient(180deg, #61C3D3, #B8E4EB);
+    color: white;
+  }
+  
+  .HowtoUse_Container h2 {
+    margin: 0;
+    padding: 35% 0 0 5rem;
+    text-shadow: 
+    0.2px 0.2px 0 #ffffff,  /* 右下 */
+    -0.2px 0.2px 0 hsl(0, 0%, 100%), /* 左下 */
+    0.2px -0.2px 0 #ffffff, /* 右上 */
+    -0.2px -0.2px 0 #ffffff; /* 左上 */
 
-    .Quest_info h2 img {
-        position: absolute;
-        width: 20%;
-        top: 85%;
-        left: 42%;
-    }
+  }
+  
+  .HowtoUse_Container p {
+    color: #01A2A3;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 0 15% 5rem;
+    text-shadow: 
+    0.2px 0.2px 0 #01A2A3,  /* 右下 */
+    -0.2px 0.2px 0 #01A2A3, /* 左下 */
+    0.2px -0.2px 0 #01A2A3, /* 右上 */
+    -0.2px -0.2px 0 #01A2A3; /* 左上 */
 
-    .Quest_info_container {
-        background: linear-gradient(180deg, #61C3D3,#7BD2E0,#C0E7ED);
-        border-radius: 4rem;
-    }
-    .quest_Description h3{
-        text-align: center;
-        font-size: 2.2rem;
-        padding: 4rem 0;
-        font-weight: bold;
-        color: white;
-        margin: 0;
+  }
+  
+  .swiper {
+    width: 30.5rem;
+    height: 77rem;
+    padding: 20% 0;
+    margin: 0;
+  }
+  
+  .swiper-slide img {
+    max-width: 100%;
+    width: 75%;
+    margin: 0 10%;
+  }
+  
+  .swiper-slide h3 {
+    text-align: center;
+    text-shadow: 
+    0.2px 0.2px 0 white,  /* 右下 */
+    -0.2px 0.2px 0 white, /* 左下 */
+    0.2px -0.2px 0 white, /* 右上 */
+    -0.2px -0.2px 0 white; /* 左上 */
 
-    }
-    .quest_Description p {
-        padding: 0 4rem;
-        text-align: center;
-    }
+  }
+  
+  .swiper-slide h3 span {
+    color: #01A2A3;
+    text-shadow: 
+    0.2px 0.2px 0 #01A2A3,  /* 右下 */
+    -0.2px 0.2px 0 #01A2A3, /* 左下 */
+    0.2px -0.2px 0 #01A2A3, /* 右上 */
+    -0.2px -0.2px 0 #01A2A3; /* 左上 */
 
-    .Quest_info_container {
-        margin: 20% 0;
-    }
-    .border img {
-        max-width: 100%;
-        width: 80%;
-        margin: auto 10%;
-    }
+  }
+  
+  .swiper-slide p {
+    color: white;
+    padding: 0 10%;
+    font-size: 1.4rem;
+    text-align: center;
+    text-shadow: none;
+  }
+  
+  
+  
+  /* TripQuestで雨の日を特別にしよう！　セクション */
+  .questList_Intro_outer {
+    background: linear-gradient(180deg, #B8E4EB, white);
+  }
+  
+  .questList_Intro_inner {
+    padding: 8rem 0 4rem 0;
+  
+  }
+  
+  .questList_Intro {
+    background: linear-gradient(180deg, #61C3D3, #ADFDDB);
+    border-radius: 4rem;
+    color: white;
+  }
 
-    .quest_Description figure {
-        position: relative;
-    }
-    .quest_Description figure img{
-        max-width: 100%;
-        width: 74%;
-    }
+  .questList_Intro_Animation {
+    animation-name: TQ_description_animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    opacity: 0;
+  }
+  .questList_Intro_inner_Animation {
+    animation-name: TQ_description_animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+  }
 
-    .quest_Description p {
-        margin: 30% 0 20% 0;
-    }
-    .quest_Description figure p {
-        width: 55%;
-        text-align: left;
-        background: rgb(1 ,162, 163, 0.8);
-        border-radius: 30px;
-        padding: 2rem ;
-        position: absolute;
-        top: 58%;
-        left: 33%;
-        margin: 0;
-    }
+  .questList_Intro_inner h2 {
+    text-align: center;
+    margin: 0 2.5rem;
+    text-shadow: 
+    0.1px 0.1px 0 white,  /* 右下 */
+    -0.1px 0.1px 0 white, /* 左下 */
+    0.1px -0.1px 0 white, /* 右上 */
+    -0.1px -0.1px 0 white; /* 左上 */
 
-        /* スポット情報 */
-        .Spot_Info p {
-            padding: 0 15%;
-            font-size: 1.4rem;
-            margin: 10% 0 20% 0;
-        }
+  }
+  
+  .questList_Intro_inner p {
+    padding: 4rem 6.5rem 0 6.5rem;
+    margin: 0;
+    font-weight: 9px;
+  }
+  
+  .questList_Intro_inner p strong {
+    color: #01A2A3;
+    font-weight: bold;
+  }
+  
+  
+  /* QuestList BTN */
+  .questList_Intro .questList {
+    margin: 3rem 2.5rem;
+    border: 3px dotted #61C3D3;
+    border-radius: 4rem;
+  }
+  
+  .questList_Intro .questList h3 {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 2.2rem;
+  }
+  
+  .questList_Intro .questList .questList_inner {
+    color: white;
+  }
+  
+  .questList_Intro .questList_btn,
+  .questList_btnQ3 {
+    border: solid 2px #01A2A3;
+    background: rgb(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 30px;
+    margin: 2rem 2.5rem;
+    position: relative;
+  }
+  
+  .questList_Intro .questList_btn a,
+  .questList_btnQ3 a {
+    text-decoration: none;
+  }
+  
+  .questList_Intro .questList_btn p {
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+  }
+  
+  .questList_Intro .questList_btn .btn-name p strong {
+    font-size: 1.4rem;
+    color: black;
+  }
+  
+  .questList_Intro .questList_btn .btn-name p small {
+    color: #01A2A3;
+    font-size: 1.2rem;
+    margin: 0;
+    padding-left: 1.6rem;
+  }
+  
+  .questList_Intro .questList_btn .btn-name p img {
+    width: 1.2rem;
+    position: absolute;
+    top: 58%;
+  }
+  
+  .questList_Intro .questList_btn a span {
+    position: absolute;
+    top: 25%;
+    right: 3%;
+  }
+  
+  .questList_Intro .questList_btn a span img {
+    width: 3.8rem;
+  }
+  
+  /* Quest List Btn Quest 3 part */
+  .questList_Intro .questList_btnQ3 .btn-nameQ3 p {
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    text-align: left;
+  }
+  
+  .questList_Intro .questList_btnQ3 .btn-nameQ3 p strong {
+    font-size: 1.4rem;
+    color: black;
+  }
+  
+  .questList_Intro .questList_btnQ3 .btn-nameQ3 p small {
+    color: #01A2A3;
+    font-size: 1.2rem;
+    margin: 0;
+    padding-left: 1.6rem;
+  }
+  
+  .questList_Intro .questList_btnQ3 .btn-nameQ3 p img {
+    width: 1.2rem;
+    position: absolute;
+    top: 68%;
+  }
+  
+  .questList_Intro .questList_btnQ3 a span {
+    position: absolute;
+    top: 35%;
+    right: 3%;
+  }
+  
+  .questList_Intro .questList_btnQ3 a span img {
+    width: 3.8rem;
+  }
+  
+  
+  
+  /* Quest 説明 */
+  .Quest_info {
+    margin: 50% 2.5rem;
+    color: white;
+  }
+  
+  .Quest_info h2 {
+    background-color: #01A2A3;
+    border-radius: 4rem;
+    text-align: center;
+    margin: 0 7.5rem;
+    padding: 2rem 1rem;
+    position: relative;
+  }
+  
+  .Quest_info h2 img {
+    position: absolute;
+    width: 20%;
+    top: 85%;
+    left: 42%;
+  }
+  
+  .Quest_info_container {
+    background: linear-gradient(180deg, #61C3D3, #7BD2E0, #C0E7ED);
+    border-radius: 4rem;
+  }
+  
+  .quest_Description h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    padding: 4rem 0;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+  }
+  
+  .quest_Description p {
+    padding: 0 4rem;
+    text-align: center;
+  }
+  
+  .Quest_info_container {
+    margin: 20% 0;
+  }
+  
+  .border img {
+    max-width: 100%;
+    width: 80%;
+    margin: auto 10%;
+  }
+  
+  .quest_Description figure {
+    position: relative;
+  }
+  
+  .quest_Description figure img {
+    max-width: 100%;
+    width: 74%;
+  }
+  
+  .quest_Description p {
+    margin: 30% 0 20% 0;
+  }
+  
+  .quest_Description figure p {
+    width: 55%;
+    text-align: left;
+    background: rgb(1, 162, 163, 0.8);
+    border-radius: 30px;
+    padding: 2rem;
+    position: absolute;
+    top: 58%;
+    left: 33%;
+    margin: 0;
+  }
+  
+  /* スポット情報 */
+  .Spot_Info p {
+    padding: 0 15%;
+    font-size: 1.4rem;
+    margin: 10% 0 20% 0;
+  }
+  
+  .Spot_Info_title {
+    margin: 15% 0 5% 0;
+  }
+  
+  .Spot_Info_title h4 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.5rem;
+  }
+  
+  .Spot_Info_title p {
+    color: #01A2A3;
+    text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .Spot_Info figure {
+    margin: 0 10%;
+  }
+  
+  .Spot_Info figure img {
+    max-width: 100%;
+  }
+  
+  /* 達成条件 */
+  
+  .clear_Requirement h4 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .clear_Requirement figure {
+    margin: 0 10%;
+  }
+  
+  .clear_Requirement figure img {
+    max-width: 100%;
+  }
+  
+  .clear_Requirement_Info {
+    margin: 10% 0 20% 0;
+  }
+  
+  .clear_Requirement_Info p {
+    margin: 0 15% 0 15%;
+  }
+  
+  .clear_Requirement_Info span p {
+    margin: 5% 15% 0 15%;
+  }
+  
+  .clear_Requirement_Info p strong {
+    color: #01A2A3;
+  }
+  
+  .questPeek {
+    position: relative;
+  }
+  
+  .questPeek p {
+    font-size: 2.2rem;
+    color: #01A2A3;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+  
+  }
+  
+  .questPeek img {
+    max-width: 80%;
+    position: relative;
+    left: 25%;
+  }
+  
+  /*  TQ　Quest Button */
+  .TQQuestPageBtn_container {
+    padding: 0 0 4rem 0;
+    margin: 0 4rem;
+    width: 27.5rem;
+  }
+  
+  .TQQuestPageBtn {
+    background-color: #01A2A3;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0;
+  }
+  
+  .TQQuestPageBtn p a {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0 0 0 4rem;
+  }
+  
+  .TQQuestPageBtn div {
+    padding: 1.2rem 1rem 1rem 0;
+  }
+  
+  .TQQuestPageBtn div img {
+    max-width: 3.8rem;
+  }
+  
+  
+  /* TripQuestへGo Banner Button */
+  .banner_Button {
+    width: 35.2rem;
+    margin: 0 auto;
+    padding: 0 0 40% 0;
+  }
+  
+  .banner_Button a img {
+    max-width: 100%;
+  
+  }
+  
+  
+  /* Footer */
+  .footer {
+    width: 27.4rem;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Back to Top Button */
+  .BackToTop_Button {
+    max-width: 20%;
+    position: absolute;
+    right: -1%;
+    top: -55%;
+  }
+  
+  .share_Container {
+    margin: 60% 0 40% 0;
+  
+  }
+  
+  .share_Container p {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #01A2A3;
+    margin: 10% 0;
+    font-weight: bolder;
+  }
+  
+  .SNS_Icons_Container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0;
+  }
+  
+  .SNS_Icons_Container img {
+    max-width: 100%;
+    width: 25%;
+  }
+  .footer_TQ_Logo {
+    width: 34%;
+    margin: 0 auto;
+  }
 
-        .Spot_Info_title {
-            margin: 15% 0 5% 0;
-        }
-        .Spot_Info_title h4{
-            font-size: 2rem;
-            text-align: center;
-            margin: 0;
-            letter-spacing: 0.5rem;
-        }
-        .Spot_Info_title p {
-            color: #01A2A3;
-            text-align: center;
-            margin: 0;
-            font-size: 1.2rem;
-        }
-        .Spot_Info figure {
-            margin: 0 10%;
-        }
-        .Spot_Info figure img {
-            max-width: 100%;
-        }
-
-        /* 達成条件 */
-
-        .clear_Requirement h4 {
-            text-align: center;
-            font-size: 2rem;
-        }
-        .clear_Requirement figure {
-            margin: 0 10%;
-        }
-        .clear_Requirement figure img {
-            max-width: 100%;
-        }
-
-        .clear_Requirement_Info {
-            margin: 10% 0 20% 0;
-        }
-        .clear_Requirement_Info p {
-            margin: 0 15% 0 15%;
-        } 
-        .clear_Requirement_Info span p {
-            margin: 5% 15% 0 15%;
-        }
-        .clear_Requirement_Info p strong {
-            color: #01A2A3;
-        }
-        .questPeek {
-            position: relative;
-        }
-        .questPeek p{
-            font-size: 2.2rem;
-            color: #01A2A3;
-            width: 40%;
-            position: absolute;
-            bottom: 0;
-            margin: 0;
-
-        }
-        .questPeek img {
-            max-width: 80%;
-            position: relative;
-            left: 25%;
-        }
-        
-        /*  TQ　Quest Button */
-        .TQQuestPageBtn_container {
-            padding: 0 0 4rem 0;
-            margin: 0 4rem;
-            width: 27.5rem;
-        }
-        .TQQuestPageBtn {
-            background-color: #01A2A3;
-            border-radius: 3rem;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 0;
-        }
-        .TQQuestPageBtn p a {
-            color: white;
-            font-size: 1.4rem;
-            font-weight: bolder;
-            list-style-type: none;
-            text-decoration: none;
-            padding: 0 0 0 4rem;
-        }
-        .TQQuestPageBtn div {
-            padding: 1.2rem 1rem 1rem 0;
-        }
-        .TQQuestPageBtn div img {
-            max-width: 3.8rem;
-        }
-        
-
-        /* TripQuestへGo Banner Button */
-        .banner_Button {
-            width: 35.2rem;
-            margin: 0 auto ;
-            padding: 0 0 40% 0;
-        }
-        .banner_Button a img{
-            max-width: 100%;
-
-        }
-
-
-        /* Footer */
-        .footer {
-            width: 27.4rem ;
-            margin: 0 auto;
-            position: relative;
-        }
-            /* Back to Top Button */
-            .BackToTop_Button {
-                max-width: 20%;
-                position: absolute;
-                right: -1%;
-                top: -55%;
-            }
-        .share_Container {
-            margin: 60% 0 40% 0;
-
-        }
-        .share_Container p{
-            font-size: 2.2rem;
-            text-align: center;
-            color: #01A2A3;
-            margin: 10% 0;
-            font-weight: bolder;
-        }
-        .SNS_Icons_Container {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            margin: 0;
-        }
-
-        .SNS_Icons_Container img {
-            max-width: 100%;
-            width: 25%;
-        }
-        .footer p  {
-            text-align: center;
-            color: #01A2A3;
-        }
-
-        
-
-
-        /* PC版　 */
+  .footer p {
+    text-align: center;
+    color: #01A2A3;
+  }
+  
+  
+  
+  
+  /* PC版　 */
