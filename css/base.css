@@ -33,7 +33,7 @@ html {
     @keyframes slideUp_Animation {
       0% {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(100px);
       }
       100% {
         opacity: 1;
@@ -41,7 +41,53 @@ html {
       }
     }
 
+    /* Slide Right */
+    .slideRight {
+      animation-name: slideRight_Animation;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+    @keyframes slideRight_Animation {
+      0% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+    /* Slide Left */
+    .slideLeft {
+      animation-name: slideLeft_Animation;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+    @keyframes slideLeft_Animation {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+
+
     /* PopAnimation */
+    .popAnimation {
+      animation-name:popAnimation ;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
     @keyframes popAnimation {
       0% {
         opacity: 0;
@@ -52,14 +98,52 @@ html {
         scale: 1;
       }
     }
-      
+      /* slidedown Animation */
+    .slideDown {
+      animation-name: slideDown_Animation;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+    @keyframes slideDown_Animation {
+     0% {
+      opacity: 0;
+      transform: translateY(-50px);
+     }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    }
+
+    /* RainDrop Animation */
+    /* .RainDropAnimation {
+      animation-name: RainDropAnimation;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      opacity: 1;
+    }
+    @keyframes RainDropAnimation {
+      0% {
+        opacity: 1;
+        transform: translateY(100px)
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    } */
+    
   /* Hamburger Menu */
   .hamburger_Container {
     display: flex;
     justify-content: space-between;
     padding: 4rem 2.5rem 0 2.5rem;
     z-index: 1002;
-
   }
   
   .header__btn {
@@ -162,9 +246,14 @@ html {
   .main-visual figure p img {
     max-width: 50%;
     margin: 0 auto;
-  
+    animation-name: popAnimation;
+    animation-duration: 2s;
   }
   
+  .catchCopy {
+    animation-name: slideUp;
+    animation-duration: 2s;
+  }
   .main-visual p {
     text-align: center;
     font-size: 2rem;
@@ -191,6 +280,8 @@ html {
     padding: 4rem 6.2%;
     position: relative;
     z-index: -998;
+    animation-name: popAnimation;
+    animation-duration: 2s;
   
   }
   
@@ -234,6 +325,9 @@ html {
     }
 
   /* ABOUT Section */
+  .about {
+    opacity: 0;
+  }
   .about p {
     text-align: center;
     font-size: 2rem;
@@ -257,12 +351,7 @@ html {
     list-style-type: none;
     padding: 0;
     font-size: 3.2rem;
-    font-weight: bolder;
-    text-shadow: 
-    0.2px 0.2px 0 black,  /* 右下 */
-    -0.2px 0.2px 0 black, /* 左下 */
-    0.2px -0.2px 0 black, /* 右上 */
-    -0.2px -0.2px 0 black; /* 左上 */
+    font-weight: 700;
    }  
   
   /* Droplet Border1 */
@@ -292,12 +381,6 @@ html {
   
   .about p {
     font-size: 2rem;
-    text-shadow: 
-    0.2px 0.2px 0 #01A2A3,  /* 右下 */
-    -0.2px 0.2px 0 #01A2A3, /* 左下 */
-    0.2px -0.2px 0 #01A2A3, /* 右上 */
-    -0.2px -0.2px 0 #01A2A3; /* 左上 */
-
   }
   
   .aboutInfo {
@@ -309,14 +392,13 @@ html {
     font-size: 2.6rem;
     color: #01A2A3;
     margin: 4rem 0 2rem 0;
-    text-shadow: 
-    0.1px 0.1px 0 #01A2A3,  /* 右下 */
-    -0.1px 0.1px 0 #01A2A3, /* 左下 */
-    0.1px -0.1px 0 #01A2A3, /* 右上 */
-    -0.1px -0.1px 0 #01A2A3; /* 左上 */
-
+    opacity: 0;
+    animation-duration: 2s;
   }
-  
+  .aboutInfo p {
+    opacity: 0;
+    animation-duration: 2s;
+  }
   .aboutInfo picture img {
     max-width: 100%;
     padding: 2rem 0 4rem 0;
@@ -353,7 +435,6 @@ html {
 
       }
     }
-
   .TQ_description_inner {
     padding: 8rem 5rem;
     color: white;
@@ -372,19 +453,12 @@ html {
   .TQ_description_inner h2 {
     margin: 0;
     padding-bottom: 2rem;
-    font-weight: bolder;
-    text-shadow: 
-    0.2px 0.2px 0 white,  /* 右下 */
-    -0.2px 0.2px 0 white, /* 左下 */
-    0.2px -0.2px 0 white, /* 右上 */
-    -0.2px -0.2px 0 white; /* 左上 */
-
+    font-weight: 700;
   }
   
   .TQ_description_inner p {
     padding: 1.5rem 1.5rem;
-    margin: 0;
-  
+    margin: 0;  
   }
   
   /* TQ移行ボタン */
@@ -399,10 +473,10 @@ html {
   .TQserviceBtn_Animation {
     animation-name: popAnimation;
     animation-duration: 0.7s;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    animation-delay: 0.4s;
+    animation-delay: 0.1s;
     opacity: 0;
   }
 
@@ -414,13 +488,7 @@ html {
     list-style-type: none;
     text-decoration: none;
     padding: 0 0 0 4rem;    
-    text-shadow: 
-    0.1px 0.1px 0 #000000,  /* 右下 */
-    -0.1px 0.1px 0 #000000, /* 左下 */
-    0.1px -0.1px 0 #010101, /* 右上 */
-    -0.1px -0.1px 0 #000000; /* 左上 */
-
-
+    font-weight: 700;
   }
   
   .TQserviceBtn p {
@@ -447,12 +515,8 @@ html {
   .HowtoUse_Container h2 {
     margin: 0;
     padding: 35% 0 0 5rem;
-    text-shadow: 
-    0.2px 0.2px 0 #ffffff,  /* 右下 */
-    -0.2px 0.2px 0 hsl(0, 0%, 100%), /* 左下 */
-    0.2px -0.2px 0 #ffffff, /* 右上 */
-    -0.2px -0.2px 0 #ffffff; /* 左上 */
-
+    /* opacity: 0;
+    animation-duration: 2s; */
   }
   
   .HowtoUse_Container p {
@@ -460,12 +524,8 @@ html {
     font-weight: 500;
     margin: 0;
     padding: 0 0 15% 5rem;
-    text-shadow: 
-    0.2px 0.2px 0 #01A2A3,  /* 右下 */
-    -0.2px 0.2px 0 #01A2A3, /* 左下 */
-    0.2px -0.2px 0 #01A2A3, /* 右上 */
-    -0.2px -0.2px 0 #01A2A3; /* 左上 */
-
+    /* opacity: 0;
+    animation-duration: 2s; */
   }
   
   .swiper {
@@ -473,6 +533,15 @@ html {
     height: 77rem;
     padding: 20% 0;
     margin: 0;
+  }
+  .swiper-slide {
+    opacity: 0;
+  }
+  .swiperAnimation {
+    animation-name: popAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    opacity: 1;
   }
   
   .swiper-slide img {
@@ -483,22 +552,10 @@ html {
   
   .swiper-slide h3 {
     text-align: center;
-    text-shadow: 
-    0.2px 0.2px 0 white,  /* 右下 */
-    -0.2px 0.2px 0 white, /* 左下 */
-    0.2px -0.2px 0 white, /* 右上 */
-    -0.2px -0.2px 0 white; /* 左上 */
-
   }
   
   .swiper-slide h3 span {
     color: #01A2A3;
-    text-shadow: 
-    0.2px 0.2px 0 #01A2A3,  /* 右下 */
-    -0.2px 0.2px 0 #01A2A3, /* 左下 */
-    0.2px -0.2px 0 #01A2A3, /* 右上 */
-    -0.2px -0.2px 0 #01A2A3; /* 左上 */
-
   }
   
   .swiper-slide p {
@@ -549,14 +606,13 @@ html {
   .questList_Intro_inner h2 {
     text-align: center;
     margin: 0 2.5rem;
-    text-shadow: 
-    0.1px 0.1px 0 white,  /* 右下 */
-    -0.1px 0.1px 0 white, /* 左下 */
-    0.1px -0.1px 0 white, /* 右上 */
-    -0.1px -0.1px 0 white; /* 左上 */
-
   }
-  
+  .questList_Intro_innerH2_Animation {
+    animation-name: popAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    opacity: 0;
+  }
   .questList_Intro_inner p {
     padding: 4rem 6.5rem 0 6.5rem;
     margin: 0;
@@ -565,7 +621,7 @@ html {
   
   .questList_Intro_inner p strong {
     color: #01A2A3;
-    font-weight: bold;
+    font-weight: 700;
   }
   
   
@@ -587,7 +643,7 @@ html {
   }
   
   .questList_Intro .questList_btn,
-  .questList_btnQ3 {
+  .questList_Intro .questList_btnQ3 {
     border: solid 2px #01A2A3;
     background: rgb(255, 255, 255, 0.5);
     text-align: center;
@@ -595,8 +651,18 @@ html {
     border-radius: 30px;
     margin: 2rem 2.5rem;
     position: relative;
+    opacity: 0;
   }
   
+  .questListBtnAnimation {
+    animation-name: popAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+  }
+
   .questList_Intro .questList_btn a,
   .questList_btnQ3 a {
     text-decoration: none;
@@ -606,7 +672,7 @@ html {
     margin: 0;
     padding: 0 0 0 1.5rem;
     text-align: left;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: -0.5px;
   }
   
@@ -655,6 +721,7 @@ html {
     font-size: 1.2rem;
     margin: 0;
     padding-left: 1.6rem;
+    font-weight: 700;
   }
   
   .questList_Intro .questList_btnQ3 .btn-nameQ3 p img {
@@ -676,9 +743,14 @@ html {
   
   
   /* Quest 説明 */
+  .Quest_info_container {
+    opacity: 0;
+    animation-duration: 0s;
+  }
   .Quest_info {
     margin: 50% 2.5rem;
     color: white;
+
   }
   
   .Quest_info h2 {
@@ -688,6 +760,7 @@ html {
     margin: 0 7.5rem;
     padding: 2rem 1rem;
     position: relative;
+
   }
   
   .Quest_info h2 img {
@@ -700,6 +773,11 @@ html {
   .Quest_info_container {
     background: linear-gradient(180deg, #61C3D3, #7BD2E0, #C0E7ED);
     border-radius: 4rem;
+
+  }
+  .quest_Description {
+    opacity: 0;
+
   }
   
   .quest_Description h3 {
@@ -709,8 +787,8 @@ html {
     font-weight: bold;
     color: white;
     margin: 0;
-  }
-  
+    opacity: 0;
+  }  
   .quest_Description p {
     padding: 0 4rem;
     text-align: center;
@@ -733,6 +811,7 @@ html {
   .quest_Description figure img {
     max-width: 100%;
     width: 74%;
+    opacity: 0;
   }
   
   .quest_Description p {
@@ -749,6 +828,9 @@ html {
     top: 58%;
     left: 33%;
     margin: 0;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-delay: 0.6s;
   }
   
   /* スポット情報 */
@@ -760,6 +842,7 @@ html {
   
   .Spot_Info_title {
     margin: 15% 0 5% 0;
+
   }
   
   .Spot_Info_title h4 {
@@ -774,14 +857,18 @@ html {
     text-align: center;
     margin: 0;
     font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
   }
   
   .Spot_Info figure {
     margin: 0 10%;
+    opacity: 0;
   }
   
   .Spot_Info figure img {
     max-width: 100%;
+
   }
   
   /* 達成条件 */
@@ -789,10 +876,13 @@ html {
   .clear_Requirement h4 {
     text-align: center;
     font-size: 2rem;
+    letter-spacing: 0.3rem;
+    opacity: 0;
   }
   
   .clear_Requirement figure {
     margin: 0 10%;
+    opacity: 0;
   }
   
   .clear_Requirement figure img {
@@ -817,8 +907,18 @@ html {
   
   .questPeek {
     position: relative;
+    margin: 40px 40px;
   }
-  
+
+    .questPeek img {
+    max-width: 80%;
+    position: relative;
+    left: 25%;
+    opacity: 0;
+    animation-duration: 2s;
+
+  }
+
   .questPeek p {
     font-size: 2.2rem;
     color: #01A2A3;
@@ -826,13 +926,9 @@ html {
     position: absolute;
     bottom: 0;
     margin: 0;
+    font-weight: 700;
+    animation-duration: 2s;
   
-  }
-  
-  .questPeek img {
-    max-width: 80%;
-    position: relative;
-    left: 25%;
   }
   
   /*  TQ　Quest Button */
@@ -873,6 +969,8 @@ html {
     width: 35.2rem;
     margin: 0 auto;
     padding: 0 0 40% 0;
+    opacity: 0;
+    animation-duration: 1s;
   }
   
   .banner_Button a img {
@@ -894,11 +992,13 @@ html {
     position: absolute;
     right: -1%;
     top: -55%;
+    opacity: 0;
   }
   
   .share_Container {
     margin: 60% 0 40% 0;
-  
+    opacity: 0;
+    animation-duration: 2s;
   }
   
   .share_Container p {
@@ -915,14 +1015,15 @@ html {
     gap: 1rem;
     margin: 0;
   }
-  
-  .SNS_Icons_Container img {
+  .SNS_Icons_Container a img {
     max-width: 100%;
-    width: 25%;
+    width: 80%;
+    margin: 0 auto;
   }
   .footer_TQ_Logo {
     width: 34%;
     margin: 0 auto;
+    opacity: 0;
   }
 
   .footer p {
