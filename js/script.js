@@ -26,11 +26,16 @@ navLinks.forEach(link => {
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
-  
-  });
-  
+    // loop: true,
+    // If we need pagination
+    pagination: {
+    el: '.swiper-pagination',
+    }
 
+  });
+
+
+// JQuery Scroll Trigger Animation (Anker Link)
   $(function(){
     $('a[href^="#"]').click(function(){
       var speed = 1000;
@@ -41,7 +46,8 @@ const swiper = new Swiper('.swiper', {
       return false;
     });
   });
-  
+
+// Animations
   // WideWater Animation
   function wideWaterAnimation () {
     $('.wideWaterDrop').each(function(){
@@ -82,6 +88,8 @@ const swiper = new Swiper('.swiper', {
     slideUpAnimation();
   })
 
+
+
   // Quest_info H2 Animation
   function Quest_infoH2Animation () {
     $('.Quest_info h2 ').each(function(){
@@ -120,6 +128,26 @@ const swiper = new Swiper('.swiper', {
 
   $(window).scroll(function(){
     aboutListAnimation();
+  })
+
+  //  // Droplet Border Animation
+  //  function aboutInfoAnimation () {
+  //   $('.droplet_Large').each(function(){
+  //     const position = $(this).offset().top;
+  //     const scroll = $(window).scrollTop();
+  //     const windowHeight = $(window).height();
+
+  //     if ( scroll > position - windowHeight) {
+  //       $(this).addClass('UpDown_Animation');
+  //     }
+  //     // else {
+  //     //   $(this).removeClass('UpDown_Animation');
+  //     // }
+  //   });
+  // }
+
+  $(window).scroll(function(){
+    aboutInfoAnimation();
   })
 
    // About Info Animation
@@ -490,7 +518,7 @@ const swiper = new Swiper('.swiper', {
 
   // clear_Requirement figure Animation
   function clear_Requirement_figure_Animation () {
-    $('.clear_Requirement figure').each(function(){
+    $('.clear_Requirement figure, .clover').each(function(){
       const position = $(this).offset().top;
       const scroll = $(window).scrollTop();
       const windowHeight = $(window).height();

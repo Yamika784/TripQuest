@@ -118,26 +118,6 @@ html {
       transform: translateY(0px);
     }
     }
-
-    /* RainDrop Animation */
-    /* .RainDropAnimation {
-      animation-name: RainDropAnimation;
-      animation-duration: 1s;
-      animation-iteration-count: 1;
-      animation-timing-function: ease;
-      animation-fill-mode: forwards;
-      opacity: 1;
-    }
-    @keyframes RainDropAnimation {
-      0% {
-        opacity: 1;
-        transform: translateY(100px)
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    } */
     
   /* Hamburger Menu */
   .hamburger_Container {
@@ -252,7 +232,7 @@ html {
   }
   
   .catchCopy {
-    animation-name: slideUp;
+    animation-name: slideUp_Animation;
     animation-duration: 2s;
   }
   .main-visual p {
@@ -268,7 +248,7 @@ html {
     position: fixed;
     right: 30%;
     top: 45%;
-    /* z-index: 998; */
+    
   }
 
   .videoWrapper {
@@ -366,12 +346,43 @@ html {
   .droplet_Small img {
     width: 1.3rem;
     padding: 0.8rem 0 0 0;
+    animation-name: DownUp_Animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
-  
+    
   .droplet_Large img {
     width: 2rem;
+    animation-name: UpDown_Animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }  
+  @keyframes UpDown_Animation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
-  
+  @keyframes DownUp_Animation {
+    0% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+
   
   /* about info */
   .about_container {
@@ -421,7 +432,7 @@ html {
     top: 0;
     right: 0;
     animation-duration: 2s;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
   }
   .waterRipple2 {
     max-width: 100%;
@@ -429,7 +440,7 @@ html {
     left: 0;
     bottom: 12%;
     animation-duration: 2s;
-    animation-delay: 1.5s;
+    animation-delay: 0.7s;
   }
   .waterRipple3 {
     max-width: 100%;
@@ -437,7 +448,7 @@ html {
     bottom: 5%;
     right: 0;
     animation-duration: 2s;
-    animation-delay: 1.8s;
+    animation-delay: 0.9s;
   }
 
     /* Animation */
@@ -592,6 +603,9 @@ html {
     text-shadow: none;
   }
   
+  .swiper-pagination {
+    padding-bottom: 15%;
+  }
   
   
   /* TripQuestで雨の日を特別にしよう！　セクション */
@@ -914,7 +928,14 @@ html {
   .clear_Requirement figure img {
     max-width: 100%;
   }
-  
+  .clover {
+    max-width: 100%;
+    width: 78%;
+    position: absolute;
+    bottom: -20%;
+    left: -28%;
+    animation-delay: 0.6s;
+  }
   .clear_Requirement_Info {
     margin: 10% 0 20% 0;
   }
