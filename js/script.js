@@ -142,9 +142,6 @@ const swiper = new Swiper('.swiper', {
     aboutInfoAnimation();
   })
 
-
-
-
   // TQ_description Animation
   function TQ_descriptionAnimation () {
     $('#TQ_description').each(function(){
@@ -186,6 +183,27 @@ const swiper = new Swiper('.swiper', {
     TQ_description_innerAnimation();
   })
 
+  // Water Ripple Animation 
+  function waterRippleAnimation () {
+    $('.waterRipple, .waterRipple2, .waterRipple3').each(function(){
+      const position = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+
+      if ( scroll > position - windowHeight + 10 ) {
+        $(this).addClass('popAnimation');
+      }
+      else {
+        $(this).removeClass('popAnimation');
+      }
+    });
+  }
+
+  $(window).scroll(function(){
+    waterRippleAnimation();
+  })
+
+  
   // QuestList_Intro Animation
   function questList_IntroAnimation () {
     $('.questList_Intro').each(function(){

@@ -411,10 +411,35 @@ html {
     background: linear-gradient(180deg, white, #61C3D3);
   }
   .TQ_description {
-    /* position: relative; */
+    position: relative;
     background: linear-gradient(180deg, #61C3D3, #7BD2E0, #C0E7ED);
     border-radius: 4rem;
   }
+  .waterRipple {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation-duration: 2s;
+    animation-delay: 1s;
+  }
+  .waterRipple2 {
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 12%;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+  }
+  .waterRipple3 {
+    max-width: 100%;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    animation-duration: 2s;
+    animation-delay: 1.8s;
+  }
+
     /* Animation */
     .TQ_description_Animation {
       animation-name: TQ_description_animation;
